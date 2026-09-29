@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Intensive Outpatient Program (IOP) in Albuquerque, NM | Substance Use Treatment | New Growth Counseling</title>
+<meta name="description" content="16-week Matrix Model IOP for substance use and co-occurring mental health conditions in Albuquerque. Morning or evening groups, Medicaid and most insurance accepted. Veteran-owned.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&amp;display=swap">
+<style>
+body { margin: 0; background: #F8F5EF; color: #43504A; font-family: 'Nunito Sans', sans-serif; font-size: 17px; line-height: 1.65; text-wrap: pretty; -webkit-font-smoothing: antialiased; }
+a { color: #2F6B4F; }
+a:hover { color: #214C39; }
+:focus-visible { outline: 2px solid #2F6B4F; outline-offset: 3px; }
+summary { list-style: none; cursor: pointer; }
+summary::-webkit-details-marker { display: none; }
+details[open] .faq-plus { transform: rotate(45deg); background: #2F6B4F; color: #FFFFFF; }
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F8F5EF;">
+<dc-import name="SiteHeader" active="iop" hint-size="100%,130px"></dc-import>
+<main>
+
+<section aria-labelledby="hero-title" style="background: #F8F5EF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 12px clamp(20px, 5vw, 64px) clamp(56px, 7vw, 96px);">
+    <nav aria-label="Breadcrumb" style="font-size: 15px; margin-bottom: clamp(28px, 4vw, 48px);">
+      <ol style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; color: #55625C;">
+        <li><a href="Home.dc.html" style="text-decoration: none;">Home</a> ›</li>
+        <li><a href="Home.dc.html#services" style="text-decoration: none;">Our Services</a> ›</li>
+        <li aria-current="page">IOP Program</li>
+      </ol>
+    </nav>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: clamp(40px, 5vw, 72px); align-items: center;">
+      <div>
+        <p style="margin: 0 0 18px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #2F6B4F;">Substance use treatment · Albuquerque, NM</p>
+        <h1 id="hero-title" style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(40px, 5.2vw, 68px); line-height: 1.06; letter-spacing: -0.015em; color: #1F2D27;">Intensive Outpatient Program (IOP) in Albuquerque</h1>
+        <p style="margin: 24px 0 0; font-size: 19px; max-width: 54ch;">A 16-week, Matrix Model outpatient program for substance use and co-occurring mental health conditions. Group and individual therapy nine hours a week — mornings or after work — so you can recover without leaving your job or your family.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px;">
+          <a href="New-Patients.dc.html#schedule" style="display: inline-flex; align-items: center; gap: 10px; background: #2F6B4F; color: #FFFFFF; font-size: 17px; font-weight: 700; padding: 15px 28px; border-radius: 999px; text-decoration: none;" style-hover="background: #214C39; color: #FFFFFF;">Schedule an Assessment<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a href="tel:+15056394769" style="display: inline-flex; align-items: center; gap: 10px; border: 1.5px solid #2F6B4F; color: #214C39; font-size: 17px; font-weight: 700; padding: 14px 26px; border-radius: 999px; text-decoration: none;" style-hover="background: #E3ECE3;">Call (505) 639-4769</a>
+        </div>
+      </div>
+      <div style="position: relative; padding-bottom: 48px;">
+        <div style="aspect-ratio: 5 / 4; border-radius: 28px 28px 28px 120px; overflow: hidden; background: #E3ECE3;">
+          <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&amp;fit=crop&amp;w=1200&amp;q=70" alt="Small therapy group in conversation" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+        <dl style="position: absolute; left: clamp(0px, 4vw, 40px); right: clamp(0px, 2vw, 24px); bottom: 0; margin: 0; background: #FFFFFF; border-radius: 18px; box-shadow: 0 20px 40px -18px rgba(33, 76, 57, 0.3); padding: 18px 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));">
+          <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+            <div style="padding: 4px 18px; border-left: 1px solid #E6E0D5;">
+              <dt style="font-size: 14px; color: #55625C;">{{ f.k }}</dt>
+              <dd style="margin: 2px 0 0; font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; line-height: 1.2; color: #1F2D27;">{{ f.v }}</dd>
+            </div>
+          </sc-for>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="what-title" style="background: #FFFFFF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px, 8vw, 104px) clamp(20px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 32px 80px;">
+    <div>
+      <p style="margin: 0 0 14px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #2F6B4F;">What it is</p>
+      <h2 id="what-title" style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.12; color: #1F2D27;">What is an intensive outpatient program (IOP)?</h2>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <p style="margin: 0;">An Intensive Outpatient Program is structured addiction treatment you attend several days a week while living at home. You get the accountability and peer support of a group, plus a weekly one-on-one session with your own therapist.</p>
+      <p style="margin: 0;">Our IOP follows the Matrix Model — an evidence-based approach that combines relapse prevention, family education, cognitive behavioral therapy and ongoing drug and alcohol testing. Detox is not required to join, but the program works best as the next step after inpatient detox.</p>
+      <ul style="list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 10px;">
+        <sc-for list="{{ approaches }}" as="a" hint-placeholder-count="5">
+          <li style="font-size: 15px; font-weight: 600; color: #214C39; background: #E3ECE3; padding: 7px 16px; border-radius: 999px;">{{ a }}</li>
+        </sc-for>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="who-title" style="background: #F8F5EF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px, 8vw, 104px) clamp(20px, 5vw, 64px);">
+    <p style="margin: 0 0 14px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #2F6B4F;">Who it's for</p>
+    <h2 id="who-title" style="margin: 0 0 44px; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.12; color: #1F2D27; max-width: 24ch;">Who our Albuquerque IOP is for</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px;">
+      <sc-for list="{{ audiences }}" as="w" hint-placeholder-count="4">
+        <div style="background: #FFFFFF; border-radius: 20px; padding: 30px 28px;">
+          <span style="display: flex; width: 44px; height: 44px; border-radius: 50%; background: #E3ECE3; align-items: center; justify-content: center; margin-bottom: 18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F6B4F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></span>
+          <h3 style="margin: 0 0 8px; font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; line-height: 1.2; color: #1F2D27;">{{ w.t }}</h3>
+          <p style="margin: 0; font-size: 16px;">{{ w.d }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="expect-title" style="background: #FFFFFF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px, 8vw, 104px) clamp(20px, 5vw, 64px);">
+    <p style="margin: 0 0 14px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #2F6B4F;">What to expect</p>
+    <h2 id="expect-title" style="margin: 0 0 48px; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.12; color: #1F2D27;">What to expect in IOP, from intake to graduation</h2>
+    <ol style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 40px 36px;">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+        <li>
+          <span style="display: flex; width: 52px; height: 52px; border-radius: 50%; background: #2F6B4F; color: #FFFFFF; align-items: center; justify-content: center; font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500;">{{ s.n }}</span>
+          <h3 style="margin: 20px 0 8px; font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; line-height: 1.2; color: #1F2D27;">{{ s.t }}</h3>
+          <p style="margin: 0; font-size: 16px;">{{ s.d }}</p>
+        </li>
+      </sc-for>
+    </ol>
+    <div style="margin-top: 64px; background: #E3ECE3; border-radius: 28px; padding: clamp(32px, 4vw, 52px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px 64px;">
+      <h3 style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(28px, 3vw, 38px); line-height: 1.15; color: #1F2D27;">Program format</h3>
+      <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; font-size: 16.5px; color: #1F2D27;">
+        <sc-for list="{{ format }}" as="x" hint-placeholder-count="5">
+          <li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F6B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg><span>{{ x }}</span></li>
+        </sc-for>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="benefits-title" style="background: #214C39; color: #E9EFE9;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px, 8vw, 104px) clamp(20px, 5vw, 64px);">
+    <h2 id="benefits-title" style="margin: 0 0 48px; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.12; color: #FFFFFF;">Benefits of <em style="color: #A9C8B0;">IOP treatment</em></h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 40px 36px;">
+      <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="4">
+        <div>
+          <h3 style="margin: 0 0 10px; font-family: 'Newsreader', serif; font-weight: 500; font-size: 25px; color: #FFFFFF;">{{ b.t }}</h3>
+          <p style="margin: 0; font-size: 16px;">{{ b.d }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="clin-title" style="background: #F8F5EF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px, 8vw, 104px) clamp(20px, 5vw, 64px);">
+    <div style="display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: space-between; align-items: end; margin-bottom: 40px;">
+      <div>
+        <p style="margin: 0 0 14px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #2F6B4F;">Your care team</p>
+        <h2 id="clin-title" style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.12; color: #1F2D27;">IOP therapists in Albuquerque</h2>
+      </div>
+      <a href="Our-Team.dc.html" style="font-weight: 700; font-size: 17px; display: inline-flex; align-items: center; min-height: 44px;">Meet the full team →</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px;">
+      <sc-for list="{{ clinicians }}" as="c" hint-placeholder-count="3">
+        <a href="{{ c.href }}" style="display: flex; gap: 18px; align-items: center; background: #FFFFFF; border-radius: 20px; padding: 20px; text-decoration: none; color: #43504A;" style-hover="box-shadow: 0 14px 30px -16px rgba(33, 76, 57, 0.35);">
+          <div style="width: 84px; height: 84px; flex: none; border-radius: 50%; overflow: hidden; background: #E3ECE3;"><img src="{{ c.img }}" alt="{{ c.name }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+          <div>
+            <h3 style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: 22px; line-height: 1.2; color: #1F2D27;">{{ c.name }}</h3>
+            <p style="margin: 2px 0 6px; font-size: 14px; font-weight: 700; color: #2F6B4F;">{{ c.creds }}</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.5;">{{ c.note }}</p>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-title" style="background: #FFFFFF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px, 8vw, 104px) clamp(20px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 40px 80px; align-items: start;">
+    <div style="position: sticky; top: 24px;">
+      <p style="margin: 0 0 14px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #2F6B4F;">FAQ</p>
+      <h2 id="faq-title" style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.12; color: #1F2D27;">IOP frequently asked questions</h2>
+      <p style="margin: 20px 0 0;">Insurance, intake and privacy questions are on our <a href="FAQ.dc.html">general FAQ</a>. Still unsure? Call <a href="tel:+15056394769">(505) 639-4769</a>.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="10">
+        <details style="background: #F8F5EF; border-radius: 16px; padding: 0 24px;">
+          <summary style="display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 20px 0; font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.3; color: #1F2D27;">
+            <span>{{ f.q }}</span>
+            <span class="faq-plus" style="display: flex; flex: none; width: 34px; height: 34px; border-radius: 50%; background: #E3ECE3; color: #2F6B4F; align-items: center; justify-content: center; transition: transform .2s, background .2s;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></span>
+          </summary>
+          <p style="margin: 0 0 22px; max-width: 62ch;">{{ f.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="related-title" style="background: #F8F5EF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px, 8vw, 104px) clamp(20px, 5vw, 64px) 40px;">
+    <p style="margin: 0 0 14px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #2F6B4F;">Related services</p>
+    <h2 id="related-title" style="margin: 0 0 36px; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(30px, 3.2vw, 40px); line-height: 1.15; color: #1F2D27;">Other ways we can help</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px;">
+      <sc-for list="{{ related }}" as="r" hint-placeholder-count="3">
+        <a href="{{ r.href }}" style="display: flex; flex-direction: column; gap: 10px; background: #FFFFFF; border-radius: 20px; padding: 30px 28px; text-decoration: none; color: #43504A;" style-hover="box-shadow: 0 14px 30px -16px rgba(33, 76, 57, 0.35);">
+          <h3 style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: 25px; color: #1F2D27;">{{ r.t }}</h3>
+          <p style="margin: 0; font-size: 16px; flex: 1;">{{ r.d }}</p>
+          <span style="font-weight: 700; font-size: 16px; color: #2F6B4F;">Learn more →</span>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="cta-title" style="background: #F8F5EF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 40px clamp(20px, 5vw, 64px) clamp(64px, 8vw, 104px);">
+    <div style="background: #2F6B4F; color: #FFFFFF; border-radius: 32px; padding: clamp(40px, 6vw, 72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 28px 64px; align-items: center;">
+      <div>
+        <h2 id="cta-title" style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(34px, 4vw, 52px); line-height: 1.08;">Schedule an IOP assessment in Albuquerque</h2>
+        <p style="margin: 16px 0 0; font-size: 18px; max-width: 50ch; color: #E9EFE9;">New groups start on a rolling basis. Court-referred and self-referred clients welcome.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+        <a href="New-Patients.dc.html#schedule" style="display: inline-flex; align-items: center; background: #FFFFFF; color: #214C39; font-size: 17px; font-weight: 700; padding: 15px 28px; border-radius: 999px; text-decoration: none;" style-hover="background: #E3ECE3; color: #214C39;">Schedule an Assessment</a>
+        <a href="tel:+15056394769" style="display: inline-flex; align-items: center; border: 1.5px solid #FFFFFF; color: #FFFFFF; font-size: 17px; font-weight: 700; padding: 14px 26px; border-radius: 999px; text-decoration: none;" style-hover="background: #214C39; color: #FFFFFF;">Call (505) 639-4769</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<dc-import name="SiteFooter" hint-size="100%,680px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const P = this.page();
+    const ld = { '@context': 'https://schema.org', '@graph': [
+      { '@type': 'MedicalTherapy', name: P.service, description: P.desc, provider: { '@type': ['MedicalBusiness', 'LocalBusiness'], name: 'New Growth Counseling', telephone: '+1-505-639-4769', address: { '@type': 'PostalAddress', streetAddress: '5801 Osuna Road NE, Bldg A, Suite A-102', addressLocality: 'Albuquerque', addressRegion: 'NM', postalCode: '87109', addressCountry: 'US' } }, areaServed: 'Albuquerque, NM' },
+      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://newgrowthnm.org/' }, { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://newgrowthnm.org/mental-health-services/' }, { '@type': 'ListItem', position: 3, name: P.service }] },
+      { '@type': 'FAQPage', mainEntity: P.faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }
+    ] };
+    this.ld = document.createElement('script'); this.ld.type = 'application/ld+json'; this.ld.textContent = JSON.stringify(ld); document.head.appendChild(this.ld);
+  }
+  componentWillUnmount() { this.ld && this.ld.remove(); }
+  page() {
+    return {
+      service: 'Intensive Outpatient Program (IOP) for Substance Use',
+      desc: '16-week Matrix Model intensive outpatient program for substance use and co-occurring conditions in Albuquerque, NM.',
+      facts: [ { k: 'Length', v: '16 weeks' }, { k: 'Schedule', v: 'Mon · Wed · Thu' }, { k: 'Hours', v: '9 hrs / week' }, { k: 'Evening option', v: '5:30–8:30 pm' } ],
+      approaches: ['Matrix Model', 'Relapse prevention', 'Cognitive Behavioral Therapy', 'Motivational Interviewing', 'Group therapy', 'Weekly individual therapy'],
+      audiences: [
+        { t: 'Stepping down from detox', d: 'The IOP picks up where inpatient detox leaves off, keeping structure in place during the riskiest weeks.' },
+        { t: 'Court & probation referrals', d: 'We work directly with probation officers and the court system, and accept court-appointed clients.' },
+        { t: 'Working adults', d: 'After-work groups from 5:30–8:30 pm mean you don’t have to choose between treatment and a paycheck.' },
+        { t: 'Co-occurring conditions', d: 'Substance use alongside depression, anxiety, PTSD or other behavioral health issues — treated together.' },
+        { t: 'Veterans & first responders', d: 'Copay assistance is available. See also our dedicated First Responder Group.' }
+      ],
+      steps: [
+        { n: '01', t: 'Call or request intake', d: 'Reach us at (505) 639-4769. We verify your insurance and answer questions about court requirements.' },
+        { n: '02', t: 'Assessment', d: 'A clinician reviews your substance use, mental health and goals to confirm IOP is the right level of care.' },
+        { n: '03', t: '16 weeks of IOP', d: 'Three 3-hour group sessions a week plus a weekly individual session, with random testing throughout.' },
+        { n: '04', t: 'Step-down & aftercare', d: 'Transition to weekly individual therapy or group support, with relapse prevention tools you keep.' }
+      ],
+      format: [
+        'Group sessions Monday, Wednesday and Thursday — 3 hours each, 9 hours per week',
+        'Choose morning or evening groups; after-work sessions run 5:30–8:30 pm',
+        'Weekly individual therapy with your own licensed therapist',
+        'Random breathalyzer tests; randomized drug screens through Southwest Labs',
+        'Small, discreet groups with guest speakers, art therapy, journaling and projects',
+        'Medication management available through our private nursing partner',
+        'Food, beverages and comfortable accommodations provided'
+      ],
+      benefits: [
+        { t: 'Sobriety that holds', d: 'Relapse prevention built around your specific triggers, not generic worksheets.' },
+        { t: 'Your life stays intact', d: 'Keep your job, your home and your family routines while you get treatment.' },
+        { t: 'Court compliance', d: 'Documented attendance and testing that meet probation and court requirements.' },
+        { t: 'A recovery network', d: 'Peers who understand, and a therapist who stays with you after the program ends.' }
+      ],
+      clinicians: [
+        { slot: 'iop-c1', name: 'Desiree R. Ramirez', creds: 'LCSW, LADAC', note: 'Licensed alcohol and drug abuse counselor.', href: 'Our-Team.dc.html#desiree-ramirez' },
+        { slot: 'iop-c2', name: 'Patrick Ficke', creds: 'MA, LPCC', note: 'Substance abuse trained; retired first responder.', href: 'Our-Team.dc.html#patrick-ficke' },
+        { slot: 'iop-c3', name: 'Jacqueline Jaquez', creds: 'LMHC', note: 'Substance abuse and addiction recovery.', href: 'Our-Team.dc.html#jacqueline-jaquez' }
+      ],
+      faqs: [
+        { q: "Where can I find an intensive outpatient program (IOP) for substance abuse in Albuquerque?", a: "New Growth Counseling runs a 16-week intensive outpatient program for substance use at 5801 Osuna Road NE, Suite A-102, in Albuquerque's Northeast Heights. Groups meet Monday, Wednesday and Thursday for three hours, with morning and evening (5:30–8:30 pm) options. Call (505) 639-4769 to schedule an assessment." },
+        { q: "Is there an IOP in Albuquerque that takes Medicaid?", a: "Yes. New Growth Counseling's IOP accepts New Mexico Medicaid, along with Blue Cross Blue Shield, Magellan, Molina, Presbyterian, TriWest, True Health New Mexico, UnitedHealthcare and Western Sky Community Care. Self-pay is also available, and veterans and first responders can get copay assistance." },
+        { q: "What is the difference between IOP and inpatient rehab?", a: "Inpatient rehab means living at a treatment facility. An intensive outpatient program (IOP) lets you live at home and keep working while attending structured treatment several days a week. At New Growth Counseling, IOP is nine hours of group therapy per week plus weekly individual therapy, which suits people who need more than weekly counseling but don't need 24-hour care." },
+        { q: "Can I keep my job while doing outpatient addiction treatment in Albuquerque?", a: "Yes. New Growth Counseling's IOP has an evening group from 5:30 to 8:30 pm on Mondays, Wednesdays and Thursdays, designed for people who work during the day. Most participants keep their jobs throughout the 16-week program." },
+        { q: "How long does an intensive outpatient program last?", a: "New Growth Counseling's IOP lasts 16 weeks. It follows the Matrix Model, an evidence-based substance use treatment approach that combines group therapy, individual therapy, relapse prevention, family education and drug and alcohol testing." },
+        { q: "What is the Matrix Model of addiction treatment?", a: "The Matrix Model is a structured, evidence-based outpatient approach to substance use treatment. It combines cognitive behavioral therapy, relapse prevention, family education, 12-step facilitation and regular drug testing over about 16 weeks. New Growth Counseling uses the Matrix Model for its Albuquerque IOP." },
+        { q: "Do I need to go to detox before starting IOP?", a: "Detox isn't required to join New Growth Counseling's IOP, but clients who have completed inpatient detox tend to do best. The IOP is designed as the next step after detox, keeping structure in place during early recovery. If you're at risk of withdrawal, talk to a medical provider first." },
+        { q: "Does the IOP accept court-ordered or probation clients in Albuquerque?", a: "Yes. New Growth Counseling serves both court-appointed and voluntary clients and works directly with probation officers and the court system. The program includes documented attendance and random drug and alcohol testing through Southwest Labs." },
+        { q: "Can I get treatment for depression or anxiety along with substance use?", a: "Yes. New Growth Counseling's IOP treats substance use alone or together with co-occurring conditions such as depression, anxiety and PTSD. Medication management is available through a private nursing partner." },
+        { q: "Is there an addiction treatment program for first responders in New Mexico?", a: "Yes. New Growth Counseling in Albuquerque offers a First Responder Group for police, firefighters, EMTs and military members dealing with substance use. It is led by a licensed therapist who is a retired first responder, and it meets Tuesdays and Thursdays from 9 to 11 am." },
+        { q: "How much does IOP cost in New Mexico?", a: "The cost depends on your insurance. New Growth Counseling accepts Medicaid and most major New Mexico plans and verifies your benefits before you start, so you know your costs up front. Self-pay is available, and veterans and first responders can get copay assistance. Call (505) 639-4769 for a benefits check." },
+        { q: "How do I start the IOP at New Growth Counseling?", a: "Call (505) 639-4769 or email info@newgrowthnm.org. Staff will verify your insurance, schedule an assessment with a clinician and, if IOP is the right level of care, place you in the next morning or evening group." }
+      ],
+      related: [
+        { t: 'First Responder Group', d: 'Peer-only substance use group for police, fire, EMS and military. Tue & Thu, 9–11 am.', href: 'First-Responder-Group.dc.html' },
+        { t: 'Individual Therapy', d: 'One-on-one counseling for addiction, anxiety, depression, PTSD and more.', href: 'Individual-Therapy.dc.html' },
+        { t: 'Online Therapy', d: 'Secure video sessions from anywhere in New Mexico.', href: 'Online-Therapy.dc.html' }
+      ]
+    };
+  }
+  renderVals() {
+    const P = this.page();
+    const H = ['photo-1560250097-0b93528c311a', 'photo-1580489944761-15a19d654956', 'photo-1507003211169-0a1dd7228f2d', 'photo-1438761681033-6461ffad8d80', 'photo-1472099645785-5658abf4ff4e', 'photo-1494790108377-be9c29b29330'];
+    const off = { 'Patrick Ficke': 2, 'Desiree R. Ramirez': 1, 'Jacqueline Jaquez': 5, 'Brian O’Leary': 0, 'Jasmin Flores': 3, 'Xochitl Valenzuela': 1, 'Donna Saylor': 5, 'Yvonne Giordano': 3 };
+    P.clinicians = P.clinicians.map((c, i) => ({ ...c, img: 'https://images.unsplash.com/' + H[off[c.name] ?? i] + '?auto=format&fit=crop&w=300&q=70' }));
+    return P;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>New Patients: Insurance &amp; Intake | Therapy in Albuquerque, NM | New Growth Counseling</title>
+<meta name="description" content="Start therapy at New Growth Counseling in Albuquerque. We accept Medicaid, BCBS, Presbyterian, Molina, TriWest, UnitedHealthcare and more. Simple 4-step intake, in person or online.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&amp;display=swap">
+<style>
+body { margin: 0; background: #F8F5EF; color: #43504A; font-family: 'Nunito Sans', sans-serif; font-size: 17px; line-height: 1.65; text-wrap: pretty; -webkit-font-smoothing: antialiased; }
+a { color: #2F6B4F; }
+a:hover { color: #214C39; }
+:focus-visible { outline: 2px solid #2F6B4F; outline-offset: 3px; }
+html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F8F5EF;">
+<dc-import name="SiteHeader" active="patients" hint-size="100%,130px"></dc-import>
+<main>
+
+<section aria-labelledby="hero-title" style="background: #F8F5EF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 12px clamp(20px, 5vw, 64px) clamp(48px, 6vw, 80px);">
+    <nav aria-label="Breadcrumb" style="font-size: 15px; margin-bottom: clamp(24px, 4vw, 48px);">
+      <ol style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; color: #55625C;">
+        <li><a href="Home.dc.html" style="text-decoration: none;">Home</a> ›</li>
+        <li aria-current="page">New Patients</li>
+      </ol>
+    </nav>
+    <div style="display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 88px); align-items: flex-start;">
+      <div style="flex: 1 1 420px; min-width: 0;">
+        <p style="margin: 0 0 16px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #2F6B4F;">Insurance &amp; intake · Albuquerque, NM</p>
+        <h1 id="hero-title" style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(38px, 5.2vw, 64px); line-height: 1.06; letter-spacing: -0.015em; color: #1F2D27;">Starting therapy is <em style="color: #2F6B4F;">one call</em> away</h1>
+        <p style="margin: 22px 0 0; font-size: 19px; max-width: 52ch;">We check your insurance, match you with the right clinician and get you scheduled, usually within a week. No referral needed for most plans.</p>
+        <ul style="list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{ perks }}" as="p" hint-placeholder-count="3">
+            <li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F6B4F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg><span>{{ p }}</span></li>
+          </sc-for>
+        </ul>
+      </div>
+
+      <div id="schedule" style="flex: 1 1 380px; min-width: 0; background: #FFFFFF; border-radius: 28px; padding: clamp(24px, 4vw, 40px); box-shadow: 0 24px 48px -28px rgba(33, 76, 57, 0.35);">
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <h2 style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: 30px; line-height: 1.15; color: #1F2D27;">Request an assessment</h2>
+          <p style="margin: 8px 0 22px; font-size: 16px; color: #55625C;">Takes under a minute. We call you back within one business day.</p>
+          <form onSubmit="{{ submit }}" style="display: flex; flex-direction: column; gap: 16px;">
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 700; color: #1F2D27;">First name<input name="name" required="" autocomplete="given-name" style="width: 100%; box-sizing: border-box; font: inherit; font-size: 16px; font-weight: 400; padding: 13px 16px; min-height: 50px; border: 1.5px solid #CFC8BA; border-radius: 12px; background: #FFFFFF; color: #1F2D27;"></label>
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 700; color: #1F2D27;">Phone<input name="phone" type="tel" inputmode="tel" required="" autocomplete="tel" style="width: 100%; box-sizing: border-box; font: inherit; font-size: 16px; font-weight: 400; padding: 13px 16px; min-height: 50px; border: 1.5px solid #CFC8BA; border-radius: 12px; background: #FFFFFF; color: #1F2D27;"></label>
+            <fieldset style="border: 0; padding: 0; margin: 0; min-width: 0;">
+              <legend style="font-size: 15px; font-weight: 700; color: #1F2D27; margin-bottom: 8px; padding: 0;">What are you looking for?</legend>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <sc-for list="{{ services }}" as="s" hint-placeholder-count="5">
+                  <button type="button" aria-pressed="{{ s.pressed }}" onClick="{{ s.pick }}" style="{{ s.style }}">{{ s.label }}</button>
+                </sc-for>
+              </div>
+            </fieldset>
+            <button type="submit" style="margin-top: 6px; min-height: 54px; border: 0; border-radius: 999px; background: #2F6B4F; color: #FFFFFF; font: inherit; font-size: 17px; font-weight: 700; cursor: pointer;" style-hover="background: #214C39;">Request a call back</button>
+            <p style="margin: 0; font-size: 14px; color: #55625C; text-align: center;">Rather talk now? <a href="tel:+15056394769" style="font-weight: 700;">(505) 639-4769</a></p>
+          </form>
+        </sc-if>
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <h2 style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: 30px; color: #1F2D27;">Thanks, {{ name }}. We’ll call you soon.</h2>
+          <p style="margin: 12px 0 0;">Expect a call from (505) 639-4769 within one business day. If you are in crisis, call or text 988.</p>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="steps-title" style="background: #FFFFFF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 64px);">
+    <p style="margin: 0 0 14px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #2F6B4F;">The intake process</p>
+    <h2 id="steps-title" style="margin: 0 0 40px; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.12; color: #1F2D27; max-width: 24ch;">Four steps from first call to first session</h2>
+    <ol style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 32px;">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+        <li style="border-top: 2px solid #2F6B4F; padding-top: 20px;">
+          <span style="font-family: 'Newsreader', serif; font-size: 40px; line-height: 1; color: #2F6B4F;">{{ s.n }}</span>
+          <h3 style="margin: 12px 0 8px; font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; color: #1F2D27;">{{ s.t }}</h3>
+          <p style="margin: 0;">{{ s.d }}</p>
+        </li>
+      </sc-for>
+    </ol>
+  </div>
+</section>
+
+<section id="insurance" aria-labelledby="ins-title" style="background: #F8F5EF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px clamp(40px, 6vw, 88px);">
+    <div style="flex: 1 1 320px; min-width: 0;">
+      <p style="margin: 0 0 14px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #2F6B4F;">Insurance</p>
+      <h2 id="ins-title" style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.12; color: #1F2D27;">Plans we accept</h2>
+      <p style="margin: 18px 0 0; max-width: 46ch;">We verify your benefits before your first visit so there are no surprises. Self-pay is welcome, and veterans and first responders can get copay assistance.</p>
+    </div>
+    <ul style="flex: 2 1 460px; min-width: 0; list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 10px;">
+      <sc-for list="{{ plans }}" as="p" hint-placeholder-count="9">
+        <li style="background: #FFFFFF; border-radius: 14px; padding: 16px 20px; font-weight: 700; color: #1F2D27;">{{ p }}</li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="bring-title" style="background: #FFFFFF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 40px clamp(40px, 6vw, 88px);">
+    <div>
+      <h2 id="bring-title" style="margin: 0 0 20px; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(28px, 3vw, 38px); color: #1F2D27;">What to bring</h2>
+      <ul style="margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px;">
+        <sc-for list="{{ bring }}" as="b" hint-placeholder-count="4"><li>{{ b }}</li></sc-for>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin: 0 0 20px; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(28px, 3vw, 38px); color: #1F2D27;">What to expect</h2>
+      <ul style="margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px;">
+        <sc-for list="{{ expect }}" as="b" hint-placeholder-count="4"><li>{{ b }}</li></sc-for>
+      </ul>
+      <a href="FAQ.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; margin-top: 16px; font-weight: 700;">Read the full FAQ →</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="contact-title" style="background: #FFFFFF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px) clamp(64px, 8vw, 104px);">
+    <div style="background: #2F6B4F; color: #FFFFFF; border-radius: 32px; padding: clamp(32px, 6vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 28px;">
+      <h2 id="contact-title" style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 4vw, 46px); line-height: 1.1;">Contact us</h2>
+      <div><p style="margin: 0; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #E9EFE9;">Call</p><a href="tel:+15056394769" style="display: inline-flex; min-height: 44px; align-items: center; color: #FFFFFF; font-size: 22px; font-weight: 700; text-decoration: none;">(505) 639-4769</a><p style="margin: 0; color: #E9EFE9;">Fax (505) 639-4593</p></div>
+      <div><p style="margin: 0; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #E9EFE9;">Email</p><a href="mailto:info@newgrowthnm.org" style="display: inline-flex; min-height: 44px; align-items: center; color: #FFFFFF; font-size: 19px; font-weight: 700; text-decoration: none; overflow-wrap: anywhere;">info@newgrowthnm.org</a></div>
+      <div><p style="margin: 0; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #E9EFE9;">Visit</p><a href="https://maps.google.com/?q=5801+Osuna+Rd+NE+Suite+A-102+Albuquerque+NM+87109" style="display: inline-block; padding: 10px 0; color: #FFFFFF; font-size: 17px; text-decoration: underline;">5801 Osuna Rd NE, Bldg A, Suite A-102, Albuquerque, NM 87109</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<dc-import name="SiteFooter" hint-size="100%,680px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { svc: 'Not sure yet', sent: false, name: '' };
+  componentDidMount() {
+    const ld = { '@context': 'https://schema.org', '@type': ['MedicalBusiness', 'LocalBusiness'], name: 'New Growth Counseling', telephone: '+1-505-639-4769', email: 'info@newgrowthnm.org', url: 'https://newgrowthnm.org/', address: { '@type': 'PostalAddress', streetAddress: '5801 Osuna Rd NE, Bldg A, Suite A-102', addressLocality: 'Albuquerque', addressRegion: 'NM', postalCode: '87109', addressCountry: 'US' }, paymentAccepted: 'Insurance, Medicaid, Credit Card', areaServed: 'New Mexico' };
+    this.ld = document.createElement('script'); this.ld.type = 'application/ld+json'; this.ld.textContent = JSON.stringify(ld); document.head.appendChild(this.ld);
+  }
+  componentWillUnmount() { this.ld && this.ld.remove(); }
+  renderVals() {
+    const opts = ['Individual therapy', 'IOP program', 'First responder group', 'Online therapy', 'Not sure yet'];
+    return {
+      perks: ['Medicaid and most major New Mexico plans accepted', 'In person in Albuquerque or online anywhere in NM', 'Copay assistance for veterans and first responders'],
+      services: opts.map(o => {
+        const on = this.state.svc === o;
+        return { label: o, pressed: String(on), pick: () => this.setState({ svc: o }), style: { minHeight: 44, padding: '10px 16px', borderRadius: 999, font: 'inherit', fontSize: 15, fontWeight: 700, cursor: 'pointer', border: '1.5px solid #2F6B4F', background: on ? '#2F6B4F' : '#FFFFFF', color: on ? '#FFFFFF' : '#214C39' } };
+      }),
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true, name: new FormData(e.currentTarget).get('name') || 'there' }); },
+      sent: this.state.sent, notSent: !this.state.sent, name: this.state.name,
+      steps: [
+        { n: '01', t: 'Reach out', d: 'Call, email or use the form. A team member answers your questions and takes a few basic details.' },
+        { n: '02', t: 'Insurance check', d: 'We verify your benefits and tell you any copay up front, before you commit.' },
+        { n: '03', t: 'Intake packet', d: 'You get a short digital intake packet to complete from your phone before your visit.' },
+        { n: '04', t: 'First session', d: 'Meet your clinician in our Albuquerque office or by secure video and build a plan together.' }
+      ],
+      plans: ['Blue Cross Blue Shield', 'Magellan', 'New Mexico Medicaid', 'Molina Healthcare', 'Presbyterian', 'TriWest', 'True Health New Mexico', 'UnitedHealthcare', 'Western Sky Community Care'],
+      bring: ['Photo ID', 'Insurance card', 'List of current medications', 'Completed intake packet'],
+      expect: ['A 50–60 minute assessment with a licensed clinician', 'Questions about what brought you in and your goals', 'A recommendation for the right level of care', 'Everything you share is confidential and HIPAA protected']
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Meet Our Clinicians | Therapists &amp; Psychiatric Providers in Albuquerque, NM | New Growth Counseling</title>
+<meta name="description" content="Meet the 14 licensed therapists, psychologist and psychiatric providers at New Growth Counseling in Albuquerque, NM. Specialists in addiction, trauma, first responders and veterans.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&amp;display=swap">
+<style>
+body { margin: 0; background: #F8F5EF; color: #43504A; font-family: 'Nunito Sans', sans-serif; font-size: 17px; line-height: 1.65; text-wrap: pretty; -webkit-font-smoothing: antialiased; }
+a { color: #2F6B4F; }
+a:hover { color: #214C39; }
+:focus-visible { outline: 2px solid #2F6B4F; outline-offset: 3px; }
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F8F5EF;">
+<dc-import name="SiteHeader" active="team" hint-size="100%,130px"></dc-import>
+<main>
+
+<section aria-labelledby="hero-title" style="background: #F8F5EF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 12px clamp(20px, 5vw, 64px) clamp(40px, 5vw, 64px);">
+    <nav aria-label="Breadcrumb" style="font-size: 15px; margin-bottom: clamp(28px, 4vw, 48px);">
+      <ol style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; color: #55625C;">
+        <li><a href="Home.dc.html" style="text-decoration: none;">Home</a> ›</li>
+        <li><a href="About.dc.html" style="text-decoration: none;">About Us</a> ›</li>
+        <li aria-current="page">Meet Our Clinicians</li>
+      </ol>
+    </nav>
+    <p style="margin: 0 0 18px; font-family: 'Newsreader', serif; font-size: 24px; font-style: italic; color: #2F6B4F;">Built on respect, kindness and dignity.</p>
+    <h1 id="hero-title" style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(40px, 5.2vw, 68px); line-height: 1.06; letter-spacing: -0.015em; color: #1F2D27; max-width: 20ch;">Meet our therapists &amp; psychiatric providers in <em style="color: #2F6B4F;">Albuquerque</em></h1>
+    <p style="margin: 24px 0 0; font-size: 19px; max-width: 62ch;">Fourteen licensed New Mexico clinicians, including a clinical psychologist, a psychiatrist and a psychiatric nurse practitioner. Filter by what you need, or call and we’ll match you.</p>
+  </div>
+</section>
+
+<section aria-label="Clinician directory" style="background: #F8F5EF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px) clamp(64px, 8vw, 104px);">
+    <div role="group" aria-label="Filter clinicians by specialty" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px;">
+      <sc-for list="{{ filters }}" as="f" hint-placeholder-count="6">
+        <button type="button" aria-pressed="{{ f.pressed }}" onClick="{{ f.pick }}" style="{{ f.style }}">{{ f.label }}</button>
+      </sc-for>
+    </div>
+    <p style="margin: 0 0 20px; font-size: 15px; color: #55625C;" aria-live="polite">Showing {{ count }} clinicians</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr)); gap: 24px;">
+      <sc-for list="{{ shown }}" as="c" hint-placeholder-count="8">
+        <article id="{{ c.id }}" style="display: flex; flex-direction: column; background: #FFFFFF; border-radius: 24px; overflow: hidden;">
+          <div style="aspect-ratio: 1 / 1; background: #E3ECE3;"><img src="{{ c.img }}" alt="{{ c.alt }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+          <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
+            <h2 style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: 25px; line-height: 1.2; color: #1F2D27;">{{ c.name }}</h2>
+            <p style="margin: 0; font-size: 14px; font-weight: 700; color: #2F6B4F;">{{ c.creds }}</p>
+            <p style="margin: 0; font-size: 15px; color: #55625C;">{{ c.role }}</p>
+            <p style="margin: 8px 0 0; font-size: 16px; line-height: 1.55; flex: 1;">{{ c.bio }}</p>
+            <ul style="list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 6px;">
+              <sc-for list="{{ c.services }}" as="s">
+                <li><a href="{{ s.href }}" style="display: inline-block; font-size: 14px; font-weight: 600; color: #214C39; background: #E3ECE3; padding: 10px 14px; border-radius: 999px; text-decoration: none;" style-hover="background: #D7E4D8;">{{ s.label }}</a></li>
+              </sc-for>
+            </ul>
+            <a href="{{ c.href }}" style="margin-top: 8px; display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; font-size: 16px; text-decoration: none;">View profile →</a>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="match-title" style="background: #FFFFFF;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px, 8vw, 104px) clamp(20px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 40px 80px; align-items: center;">
+    <div>
+      <h2 id="match-title" style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.12; color: #1F2D27;">How we match you with the right therapist</h2>
+      <p style="margin: 20px 0 0;">Tell us what you’re dealing with when you call. We’ll look at your goals, schedule, insurance and whether you prefer in-person or online sessions, then pair you with a clinician whose training fits. You can also ask for someone by name.</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+      <a href="New-Patients.dc.html#schedule" style="display: inline-flex; align-items: center; background: #2F6B4F; color: #FFFFFF; font-size: 17px; font-weight: 700; padding: 15px 28px; border-radius: 999px; text-decoration: none;" style-hover="background: #214C39; color: #FFFFFF;">Schedule an Assessment</a>
+      <a href="tel:+15056394769" style="display: inline-flex; align-items: center; border: 1.5px solid #2F6B4F; color: #214C39; font-size: 17px; font-weight: 700; padding: 14px 26px; border-radius: 999px; text-decoration: none;" style-hover="background: #E3ECE3;">Call (505) 639-4769</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<dc-import name="SiteFooter" hint-size="100%,680px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { filter: 'all' };
+  data() {
+    const u = id => 'https://images.unsplash.com/' + id + '?auto=format&fit=crop&w=500&q=70';
+    const S = {
+      ind: { label: 'Individual Therapy', href: 'Individual-Therapy.dc.html' },
+      iop: { label: 'IOP', href: 'IOP-Programs.dc.html' },
+      fr: { label: 'First Responder Group', href: 'First-Responder-Group.dc.html' },
+      on: { label: 'Online Therapy', href: 'Online-Therapy.dc.html' },
+      med: { label: 'Medication Management', href: 'Individual-Therapy.dc.html' }
+    };
+    const pend = 'Full bio coming soon.';
+    return [
+      { id: 'shawn-oconnell', name: 'Shawn O’Connell', creds: 'LPCC', role: 'Licensed Professional Clinical Counselor', bio: 'Retired first responder who helped introduce Crisis Intervention Team (CIT) training to New Mexico. Individual, grief, couples, family and group therapy.', cats: ['therapy', 'fr'], s: ['ind', 'fr', 'on'], href: 'Team-Shawn-OConnell.dc.html', img: 'https://newgrowthnm.org/wp-content/uploads/2025/05/Shawn-OConnell-uai-258x258.jpg' },
+      { id: 'patrick-ficke', name: 'Patrick Ficke', creds: 'MA, LPCC', role: 'Licensed Professional Clinical Counselor', bio: 'Retired first responder trained in substance abuse treatment. Co-leads the First Responder Group.', cats: ['therapy', 'fr', 'sud'], s: ['fr', 'iop', 'ind'], img: u('photo-1507003211169-0a1dd7228f2d') },
+      { id: 'jacqueline-jaquez', name: 'Jacqueline Jaquez', creds: 'LMHC', role: 'Licensed Mental Health Counselor', bio: 'Trained in substance abuse treatment. Co-leads the First Responder Group.', cats: ['therapy', 'fr', 'sud'], s: ['fr', 'iop', 'ind'], img: u('photo-1494790108377-be9c29b29330') },
+      { id: 'brian-oleary', name: 'Brian O’Leary', creds: 'PhD, Clinical Psychologist, Col (Ret.)', role: 'Clinical Psychologist', bio: 'Retired military colonel and clinical psychologist. ' + pend, cats: ['therapy', 'vet'], s: ['ind', 'on'], img: u('photo-1560250097-0b93528c311a') },
+      { id: 'sarah-mcleroy', name: 'Sarah McLeroy', creds: 'MD', role: 'Psychiatrist', bio: 'Psychiatric evaluation and medication management. ' + pend, cats: ['med'], s: ['med'], img: u('photo-1559839734-2b71ea197ec2') },
+      { id: 'jasmin-flores', name: 'Jasmin Flores', creds: 'PMHNP-BC', role: 'Psychiatric Mental Health Nurse Practitioner', bio: 'Board-certified psychiatric nurse practitioner providing medication management. ' + pend, cats: ['med'], s: ['med', 'iop'], img: u('photo-1438761681033-6461ffad8d80') },
+      { id: 'desiree-ramirez', name: 'Desiree R. Ramirez', creds: 'LCSW, LADAC', role: 'Licensed Clinical Social Worker · Licensed Alcohol & Drug Abuse Counselor', bio: 'Dual-licensed in clinical social work and addiction counseling. ' + pend, cats: ['therapy', 'sud'], s: ['iop', 'ind'], img: u('photo-1580489944761-15a19d654956') },
+      { id: 'aaron-garcia', name: 'Aaron Garcia', creds: 'LMHC', role: 'Licensed Mental Health Counselor', bio: pend, cats: ['therapy'], s: ['ind', 'on'], img: u('photo-1472099645785-5658abf4ff4e') },
+      { id: 'yvonne-giordano', name: 'Yvonne Giordano', creds: 'LCSW', role: 'Licensed Clinical Social Worker', bio: pend, cats: ['therapy'], s: ['ind', 'on'], img: u('photo-1544005313-94ddf0286df2') },
+      { id: 'xochitl-valenzuela', name: 'Xochitl Valenzuela', creds: 'MA, LCSW', role: 'Licensed Clinical Social Worker', bio: pend, cats: ['therapy'], s: ['ind', 'on'], img: u('photo-1531123897727-8f129e1688ce') },
+      { id: 'donna-saylor', name: 'Donna Saylor', creds: 'MA, LPCC', role: 'Licensed Professional Clinical Counselor', bio: pend, cats: ['therapy'], s: ['ind', 'on'], img: u('photo-1573496359142-b8d87734a5a2') },
+      { id: 'veronica-torres', name: 'Veronica Torres', creds: 'LMSW', role: 'Licensed Master Social Worker', bio: pend, cats: ['therapy'], s: ['ind'], img: u('photo-1487412720507-e7ab37603c6f') },
+      { id: 'justin-bridges', name: 'Justin Bridges', creds: 'Credentials pending', role: 'Team member', bio: pend, cats: ['therapy'], s: ['ind'], img: u('photo-1500648767791-00dcc994a43e') },
+      { id: 'ferris-simmons', name: 'Ferris Simmons', creds: 'Credentials pending', role: 'Team member', bio: pend, cats: ['therapy'], s: ['ind'], img: u('photo-1506794778202-cad84cf45f1d') }
+    ].map(c => ({ ...c, alt: c.name + ', ' + c.creds + ', New Growth Counseling Albuquerque', href: c.href || '#' + c.id, services: c.s.map(k => S[k]) }));
+  }
+  componentDidMount() {
+    const ld = { '@context': 'https://schema.org', '@graph': [
+      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://newgrowthnm.org/' }, { '@type': 'ListItem', position: 2, name: 'About Us', item: 'https://newgrowthnm.org/about-new-growth/' }, { '@type': 'ListItem', position: 3, name: 'Meet Our Clinicians' }] },
+      { '@type': 'ItemList', name: 'New Growth Counseling clinicians', itemListElement: this.data().map((c, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'Person', name: c.name, honorificSuffix: c.creds, jobTitle: c.role, worksFor: { '@id': 'https://newgrowthnm.org/#practice' } } })) }
+    ] };
+    this.ld = document.createElement('script'); this.ld.type = 'application/ld+json'; this.ld.textContent = JSON.stringify(ld); document.head.appendChild(this.ld);
+  }
+  componentWillUnmount() { this.ld && this.ld.remove(); }
+  renderVals() {
+    const all = this.data();
+    const defs = [['all', 'All clinicians'], ['therapy', 'Therapists'], ['med', 'Psychiatry & medication'], ['sud', 'Substance use'], ['fr', 'First responders'], ['vet', 'Veterans']];
+    const f = this.state.filter;
+    const shown = f === 'all' ? all : all.filter(c => c.cats.includes(f));
+    return {
+      shown, count: shown.length,
+      filters: defs.map(([k, label]) => ({ label, pressed: String(k === f), pick: () => this.setState({ filter: k }),
+        style: { fontFamily: 'inherit', fontSize: 15, fontWeight: 700, padding: '10px 18px', minHeight: 44, borderRadius: 999, cursor: 'pointer', border: '1.5px solid #2F6B4F', background: k === f ? '#2F6B4F' : 'transparent', color: k === f ? '#FFFFFF' : '#214C39' } }))
+    };
+  }
+}
+</script>
+</body>
+</html>
